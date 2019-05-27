@@ -5,10 +5,10 @@ Created on Fri May 24 16:25:35 2019
 @author: pushparajkarthick_d
 """
 from elasticsearch import Elasticsearch
-es = Elasticsearch([{'host': '192.168.85.96', 'port': '9200'}])
+es = Elasticsearch([{'host': 'Elasticsearch_host', 'port': 'ElasticSearch_Port'}])
 #print(es.get(index='scicommon-*', id='rv2J0moByHW8pddMs9eo'))
 #es.indices.delete(index='scicommon-2019.05.19')
-index = es.indices.get_alias("qacommon-*").keys()
+index = es.indices.get_alias("Indices_name").keys()
 list(index)
 print(len(list(index)))
 index = sorted(list(index))
